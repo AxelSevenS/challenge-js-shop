@@ -53,8 +53,8 @@ function setItemPrice(itemName, itemPrice){
 
     console.log(itemName, itemQuantity, totalPrice);
 
-    cartItem.querySelectorAll(".item-price")[0].innerHTML = `${itemPrice}€ * ${itemQuantity}`;
-    cartItem.querySelectorAll(".item-total")[0].innerHTML = `${totalPrice}€`;
+    cartItem.querySelectorAll(".item-price")[0].innerHTML = `${itemPrice}euros * ${itemQuantity}`;
+    cartItem.querySelectorAll(".item-total")[0].innerHTML = `${totalPrice}euros`;
 
     if (itemQuantity == 0){
         cartItem.style.display = "none";
@@ -71,7 +71,7 @@ function setAllItemPrices(){
 
         total += setItemPrice(itemName, itemPrice);
     }
-    document.getElementById('total-price').innerHTML = `Total des Achats en Cours vaut : ${total}€`;
+    document.getElementById('total-price').innerHTML = `Total des Achats en Cours vaut : ${total}euros`;
 }
 function toggleCart(){
 
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function() {
         itemTemplate.id = `${itemName}--shop`;
         itemTemplate.style = "";
         itemTemplate.innerHTML = itemTemplate.innerHTML.replaceAll("TEMPLATE", itemName);
-        itemTemplate.querySelectorAll(".item-price")[0].innerHTML = `${itemPrice}€`;
+        itemTemplate.querySelectorAll(".item-price")[0].innerHTML = `${itemPrice}euros`;
         shopList.appendChild(itemTemplate);
     }
     shopTemplate.remove();
