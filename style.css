@@ -1,0 +1,88 @@
+body, html {
+    height: 100%;
+    overflow: hidden;
+    background-image: url("../images/bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+* {
+    box-sizing: border-box;
+}
+
+header{
+    position: relative;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header a {
+    position: absolute;
+    top: 1px;
+    right: 5px;
+    color: bisque;
+}
+
+.item-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+}
+
+.item-image-normal, .item-image-hover{
+    width: 100%;
+    cursor: pointer;
+}
+
+.item-image-hover {
+    display: none;
+}
+.item-image:hover .item-image-normal{
+    display: none;
+    cursor: pointer;
+}
+.item-image:hover .item-image-hover{
+    display: block;
+    cursor: pointer;
+}
+
+#shop{
+}
+
+#cart {
+}
+
+#shop, #cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px 20px;
+    width: 50vw;
+    height: auto;
+    text-align: center;
+    background-color: rgba(22, 46, 66, 0.75);
+    color: azure;
+}
+
+.shop-item, .cart-item{
+    width: fit-content;
+    height: fit-content;
+    border: 2px solid black;
+    margin: 5px 10px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+#shop-list, #cart-list {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: auto;
+    flex-wrap: wrap;
+}

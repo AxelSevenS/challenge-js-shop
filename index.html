@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <head>
+        <link href="style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>Shop De Kassos <a href="#" onclick="toggleCart()"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></header>
+        <div id="shop">
+
+            <div id="shop-list">
+                <div id="TEMPLATE--shop" class="shop-item">
+                    <div class="item-image">
+                        <img class="item-image-normal" src="images/TEMPLATE.png">
+                        <img class="item-image-hover" src="images/TEMPLATE-hover.png">
+                    </div>
+                    <div class="item-price"></div>
+                    <button onclick="addToCart('TEMPLATE')"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Acheter</button>
+                </div>
+            </div>
+            
+        </div>
+
+
+
+        <div id="cart" style="display: none;">
+            <h1 id="empty">Panier Vide</h1>
+
+            <div id="cart-list">
+                <div id="TEMPLATE--cart" class="cart-item">
+                    <div class="item-image">
+                        <img class="item-image-normal" src="images/TEMPLATE.png">
+                        <img class="item-image-hover" src="images/TEMPLATE-hover.png">
+                    </div>
+                    <div class="item-price"></div>
+                    <div class="item-total"></div>
+                    <button onclick="removeFromCart('TEMPLATE')"> - </button>
+                    <button onclick="addToCart('TEMPLATE')"> + </button>
+                </div>
+            </div>
+            
+            <button onclick="removeAllFromCart()">Tout vider</button>
+            <span id="total-price"></span>
+        </div>
+    </body>
+</html>
